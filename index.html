@@ -1,23 +1,715 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>보험사도 숨기는 '수입차 특약' 비교! 돈 아끼려면 이 링크 당장 클릭하세요</title>
+   <meta name="robots" content="index, follow">
+ 
+  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 스타일 및 색상 팔레트 */
+        :root {
+            --color-primary: #4a90e2; /* 부드러운 블루 */
+            --color-secondary: #f0f8ff; /* 연한 하늘색 배경 */
+            --color-text-dark: #333333; /* 본문 텍스트 */
+            --color-text-light: #555555;
+            --color-accent: #ff6b6b; /* 강조색 (버튼, 구분선) */
+            --color-background: #ffffff;
+            --color-category-bg: #e6f7ff; /* 카테고리 제목 배경 */
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: var(--color-text-dark);
+            background-color: var(--color-secondary);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* 헤더 스타일 */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--color-background);
+            border-bottom: 5px solid var(--color-primary);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: var(--color-primary);
+            font-weight: 700;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: var(--color-text-light);
+            font-size: 1.1em;
+        }
+
+        /* 카테고리 섹션 스타일 */
+        .category-section {
+            background-color: var(--color-background);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .category-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-title {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--color-primary);
+            border-bottom: 3px solid var(--color-accent);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            background-color: var(--color-category-bg);
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        /* 링크 목록 스타일 */
+        .link-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .link-item a {
+            text-decoration: none;
+            color: var(--color-primary);
+            font-weight: 700;
+            font-size: 1.1em;
+            display: block;
+            margin-right: 20px;
+            min-width: 200px; /* 링크 제목 너비 확보 */
+            transition: color 0.2s ease-in-out;
+        }
+        .link-item a:hover {
+            color: var(--color-accent);
+        }
+
+        .link-item .description {
+            flex-grow: 1;
+            font-size: 0.95em;
+            color: var(--color-text-light);
+            background-color: #fafafa;
+            padding: 10px 15px;
+            border-radius: 6px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+            cursor: pointer; /* 설명 문구도 클릭 가능하도록 */
+        }
+        .link-item .description:hover {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 푸터 스타일 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 1px solid #cccccc;
+            color: var(--color-text-light);
+            font-size: 0.9em;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "보험사도 숨기는 '수입차 특약' 비교! 돈 아끼려면 이 링크 당장 클릭하세요",
+          "url": "https://directapmoa.withusdone.com/",
+          "logo": "URL_TO_YOUR_LOGO.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "고객 지원",
+            "areaServed": "KR"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "url": "https://directapmoa.withusdone.com/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://directapmoa.withusdone.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          },
+          "publisher": {
+            "@id": "URL_TO_YOUR_ORGANIZATION_ID"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <header class="header">
+        <h1>보험사도 숨기는 '수입차 특약' 비교! 돈 아끼려면 이 링크 당장 클릭하세요</h1>
+    </header>
+
+    <main class="container">
+
+        <section class="category-section">
+            <h2 class="category-title">의무/책임 보험 필수 정보 (미가입 벌칙 안내)</h2>
+            <ul class="link-list">
+                <li class="link-item">
+                    <a href="https://directbpmoe.withusdone.com/" target="_blank">자동차보험 미가입 과태료</a>
+                    <a href="https://directbpmoe.withusdone.com/" target="_blank" class="description">**미가입은 선택이 아닙니다:** 의무 보험을 깜빡했을 때 부과되는 법적 비용, 예상치 못한 지출을 막는 긴급 점검 링크.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmoj.withusdone.com/" target="_blank">자동차 책임보험</a>
+                    <a href="https://directapmoj.withusdone.com/" target="_blank" class="description">**최소한의 안전 장치:** 법이 강제하는 필수 보장 범위와 한도를 명확하게 이해하는 첫걸음입니다.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmou.withusdone.com/" target="_blank">자동차 책임보험 가격</a>
+                    <a href="https://directcpmou.withusdone.com/" target="_blank" class="description">**생각보다 저렴한 의무:** 최소한의 보장이라도 정확한 비용을 알고 싶다면 여기서 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmoh.withusdone.com/" target="_blank">자동차 책임보험 한도</a>
+                    <a href="https://directepmoh.withusdone.com/" target="_blank" class="description">**이것만으로는 부족할 수 있어요:** 책임보험의 최대 보장 금액과 초과 비용 대비를 위한 정보.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directbpmop.withusdone.com/" target="_blank">자동차 의무보험</a>
+                    <a href="https://directbpmop.withusdone.com/" target="_blank" class="description">**법적 준수 사항:** 모든 운전자가 반드시 가입해야 하는 최소한의 보험 기준.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmow.withusdone.com/" target="_blank">자동차보험 벌금</a>
+                    <a href="https://directdpmow.withusdone.com/" target="_blank" class="description">**보험을 미룬 대가:** 의무 보험 미가입 시 부과되는 벌금 규정 및 액수 확인.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmog.withusdone.com/" target="_blank">자동차보험 안 들면</a>
+                    <a href="https://directepmog.withusdone.com/" target="_blank" class="description">**최악의 시나리오 대비:** 보험 없이 운전했을 때 발생할 수 있는 모든 법적, 재정적 위험 분석.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmop.withusdone.com/" target="_blank">자동차보험 계산</a>
+                    <a href="https://directcpmop.withusdone.com/" target="_blank" class="description">**나만의 맞춤 계산:** 복잡한 변수들을 조합하여 정확한 보험료를 산출해 보세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmox.withusdone.com/" target="_blank">자동차보험 책임보험</a>
+                    <a href="https://directepmox.withusdone.com/" target="_blank" class="description">**두 번 확인하는 필수 가입:** 책임보험의 정의와 왜 필수인지 다시 한번 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmon.withusdone.com/" target="_blank">자동차보험 미가입</a>
+                    <a href="https://directepmon.withusdone.com/" target="_blank" class="description">**무보험 운전의 위험:** 가입하지 않은 상태가 얼마나 큰 부담을 안기는지 경각심을 가질 수 있는 정보.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmot.withusdone.com/" target="_blank">내가 가입한 자동차보험 조회</a>
+                    <a href="https://directcpmot.withusdone.com/" target="_blank" class="description">**나도 모르는 나의 보험 찾기:** 현재 유효한 보험 정보를 빠르게 파악하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmoq.withusdone.com/" target="_blank">자동차 책임보험 가입</a>
+                    <a href="https://directcpmoq.withusdone.com/" target="_blank" class="description">**의무 이행의 시작:** 법적 요구 사항을 충족하는 책임보험 가입 절차 안내.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmol.withusdone.com/" target="_blank">자동차보험 조회</a>
+                    <a href="https://directapmol.withusdone.com/" target="_blank" class="description">**가입 현황 실시간 파악:** 나의 차량 보험 정보를 간단하게 확인하는 방법.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmop.withusdone.com/" target="_blank">차량보험 가입 조회</a>
+                    <a href="https://directdpmop.withusdone.com/" target="_blank" class="description">**차량 등록과 동시에:** 차량 번호로 보험 가입 여부를 조회하는 가장 빠른 길.</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">다이렉트/비교 견적: 최저가 보험료 찾기 전략</h2>
+            <ul class="link-list">
+                <li class="link-item">
+                    <a href="https://directapmoa.withusdone.com/" target="_blank">자동차보험료 비교견적 사이트</a>
+                    <a href="https://directapmoa.withusdone.com/" target="_blank" class="description">**가격 전쟁의 심판관:** 여러 보험사의 견적을 한눈에 비교하여 가장 저렴한 곳을 찾아보세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmod.withusdone.com/" target="_blank">자동차 다이렉트보험</a>
+                    <a href="https://directapmod.withusdone.com/" target="_blank" class="description">**중개 수수료 제로:** 설계사 없이 직접 가입하고 보험료를 획기적으로 절약하는 방법.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmoh.withusdone.com/" target="_blank">다이렉트 자동차보험 비교</a>
+                    <a href="https://directapmoh.withusdone.com/" target="_blank" class="description">**다이렉트 안에서도 경쟁:** 수많은 다이렉트 상품 중 나에게 가장 유리한 조건을 비교해보세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directbpmou.withusdone.com/" target="_blank">다이렉트자동차보험 비교사이트</a>
+                    <a href="https://directbpmou.withusdone.com/" target="_blank" class="description">**온라인 최저가 탐색:** 다양한 다이렉트 상품을 모아 놓은 포털에서 견적을 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmon.withusdone.com/" target="_blank">다이렉트자동차보험 비교견적 사이트</a>
+                    <a href="https://directapmon.withusdone.com/" target="_blank" class="description">**간편함과 경제성 동시 만족:** 온라인 견적을 통해 최적의 가격을 찾는 시스템.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmod.withusdone.com/" target="_blank">자동차보험 다이렉트 견적</a>
+                    <a href="https://directepmod.withusdone.com/" target="_blank" class="description">**즉시 확인, 즉시 절약:** 몇 가지 정보 입력만으로 바로 견적을 받아보는 서비스.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmol.withusdone.com/" target="_blank">다이렉트자동차보험료 비교견적</a>
+                    <a href="https://directcpmol.withusdone.com/" target="_blank" class="description">**합리적 소비자의 필수 코스:** 보험료 절감의 핵심, 다이렉트 상품의 가격 비교.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmoe.withusdone.com/" target="_blank">자동차보험 다이렉트</a>
+                    <a href="https://directapmoe.withusdone.com/" target="_blank" class="description">**보험 가입의 새로운 표준:** 저렴한 보험료와 편리한 가입 절차를 경험하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmok.withusdone.com/" target="_blank">다이렉트자동차보험 견적</a>
+                    <a href="https://directdpmok.withusdone.com/" target="_blank" class="description">**인터넷으로 받는 견적의 힘:** 대면 상담 없이도 정확한 보험료를 산출해 보세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directfpmob.withusdone.com/" target="_blank">다이렉트자동차보험 사이트</a>
+                    <a href="https://directfpmob.withusdone.com/" target="_blank" class="description">**보험사별 공식 다이렉트 채널:** 믿을 수 있는 공식 사이트 목록을 확인하고 직접 비교하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmob.withusdone.com/" target="_blank">자동차보험 비교</a>
+                    <a href="https://directapmob.withusdone.com/" target="_blank" class="description">**나에게 최적화된 상품 찾기:** 보장 내용과 보험료를 꼼꼼하게 비교 분석하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directbpmow.withusdone.com/" target="_blank">자동차 다이렉트보험 비교 견적 사이트</a>
+                    <a href="https://directbpmow.withusdone.com/" target="_blank" class="description">**한 번에 해결하는 비교 견적:** 다이렉트 상품을 모아놓은 통합 비교 플랫폼.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmor.withusdone.com/" target="_blank">자동차보험료 계산기</a>
+                    <a href="https://directapmor.withusdone.com/" target="_blank" class="description">**셀프 보험료 설계:** 내가 원하는 조건에 따라 보험료를 직접 계산해 볼 수 있습니다.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmoo.withusdone.com/" target="_blank">자동차보험 비교견적</a>
+                    <a href="https://directapmoo.withusdone.com/" target="_blank" class="description">**합리적인 선택의 기준:** 다양한 보험사의 견적을 받아보는 과정.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmog.withusdone.com/" target="_blank">자동차보험료 계산</a>
+                    <a href="https://directapmog.withusdone.com/" target="_blank" class="description">**내 보험료의 원리:** 나이, 경력, 차량가액 등 모든 변수를 반영한 정확한 비용 산출.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmoc.withusdone.com/" target="_blank">자동차보험료 비교견적</a>
+                    <a href="https://directapmoc.withusdone.com/" target="_blank" class="description">**가장 알뜰한 견적 확보:** 보험료를 절약하는 가장 기본적인 방법입니다.</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">자차/대물/자상: 보장 범위 완벽 분석</h2>
+            <ul class="link-list">
+                <li class="link-item">
+                    <a href="https://directbpmoy.withusdone.com/" target="_blank">자동차보험 자차</a>
+                    <a href="https://directbpmoy.withusdone.com/" target="_blank" class="description">**내 차를 지키는 방패:** 자기 차량 손해(자차) 보장의 핵심 내용과 가입 필요성.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmoz.withusdone.com/" target="_blank">자차보험 뜻</a>
+                    <a href="https://directdpmoz.withusdone.com/" target="_blank" class="description">**자차의 정확한 의미:** 자차보험이 어떤 상황에서 내 차량을 보상해 주는지 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmop.withusdone.com/" target="_blank">자차보험이란</a>
+                    <a href="https://directepmop.withusdone.com/" target="_blank" class="description">**자기부담금 설정의 중요성:** 자차보험의 구성과 자기부담금의 관계를 심층적으로 이해하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmoc.withusdone.com/" target="_blank">자동차 자차보험</a>
+                    <a href="https://directepmoc.withusdone.com/" target="_blank" class="description">**차량 수리 비용 걱정 끝:** 사고 시 내 차량의 손해를 보상받는 가장 확실한 방법.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directbpmox.withusdone.com/" target="_blank">자동차보험 대물배상</a>
+                    <a href="https://directbpmox.withusdone.com/" target="_blank" class="description">**고가 외제차 사고 대비:** 상대방의 차량 또는 재산 피해를 보상하는 대물배상 한도 설정 전략.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmou.withusdone.com/" target="_blank">자동차보험 대물</a>
+                    <a href="https://directepmou.withusdone.com/" target="_blank" class="description">**책임의 무게:** 대물 보장이 커버하는 피해 범위와 적정 가입 금액 설정 팁.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmoc.withusdone.com/" target="_blank">자동차보험 자상</a>
+                    <a href="https://directdpmoc.withusdone.com/" target="_blank" class="description">**나와 가족의 치료비:** 자기 신체 사고(자상) 특약의 장점과 한도 설정 가이드.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directbpmos.withusdone.com/" target="_blank">자동차 상해특약</a>
+                    <a href="https://directbpmos.withusdone.com/" target="_blank" class="description">**신체 상해의 프리미엄 보장:** 운전자와 동승자의 상해 치료비를 여유 있게 보장받는 방법.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmoe.withusdone.com/" target="_blank">자동차 상해보험</a>
+                    <a href="https://directdpmoe.withusdone.com/" target="_blank" class="description">**사고의 후유증까지 대비:** 운전 중 발생하는 신체적 피해에 대한 광범위한 보장.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmoo.withusdone.com/" target="_blank">자동차보험 자동차상해</a>
+                    <a href="https://directdpmoo.withusdone.com/" target="_blank" class="description">**치료비 걱정 없는 운전:** '자손'보다 월등히 유리한 '자상' 특약의 보상 기준 비교.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directbpmot.withusdone.com/" target="_blank">자동차보험료 조회</a>
+                    <a href="https://directbpmot.withusdone.com/" target="_blank" class="description">**나의 보험료 현황:** 현재 내 조건으로 산출되는 정확한 보험료를 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmov.withusdone.com/" target="_blank">자동차 종합보험</a>
+                    <a href="https://directapmov.withusdone.com/" target="_blank" class="description">**완벽한 운전의 완성:** 책임보험에 대인, 대물, 자차, 자손(자상) 등 모든 특약을 포함한 패키지.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmoy.withusdone.com/" target="_blank">자동차보험료 할증</a>
+                    <a href="https://directapmoy.withusdone.com/" target="_blank" class="description">**사고 후의 재정 변화:** 사고 이력에 따른 다음 해 보험료 인상 폭 예측.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directbpmon.withusdone.com/" target="_blank">자동차보험 자기부담금</a>
+                    <a href="https://directbpmon.withusdone.com/" target="_blank" class="description">**손해액 중 내가 낼 돈:** 자차 처리 시 내가 부담해야 하는 최소 금액 설정 가이드.</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">할인/할증/등급: 보험료 결정 요인 파헤치기</h2>
+            <ul class="link-list">
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmoi.withusdone.com/" target="_blank">자동차보험 할증 기준</a>
+                    <a href="https://directapmoi.withusdone.com/" target="_blank" class="description">**언제 보험료가 오를까?:** 사고 발생 시 보험료가 할증되는 정확한 기준점 분석.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmon.withusdone.com/" target="_blank">자동차보험 사고 할증</a>
+                    <a href="https://directdpmon.withusdone.com/" target="_blank" class="description">**사고의 직접적인 대가:** 사고 이력이 다음 갱신 보험료에 미치는 영향 계산.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmor.withusdone.com/" target="_blank">자동차보험 할인등급</a>
+                    <a href="https://directepmor.withusdone.com/" target="_blank" class="description">**무사고 운전의 보상:** 나의 현재 할인/할증 등급을 확인하고, 보험료를 예측해 보세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmom.withusdone.com/" target="_blank">자동차보험 할증</a>
+                    <a href="https://directapmom.withusdone.com/" target="_blank" class="description">**보험료 인상의 원인:** 할증 요인과 그에 대비하는 현명한 보험 처리 방법.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmox.withusdone.com/" target="_blank">자동차보험 할증 조회</a>
+                    <a href="https://directdpmox.withusdone.com/" target="_blank" class="description">**나의 숨겨진 리스크 점수:** 사고 유무에 따른 나의 현재 할증 등급을 확인하는 곳.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmos.withusdone.com/" target="_blank">자동차보험료 할인</a>
+                    <a href="https://directepmos.withusdone.com/" target="_blank" class="description">**절약의 기술:** 블랙박스, 마일리지, 안전운전 습관 등 다양한 할인 특약 모음.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmoc.withusdone.com/" target="_blank">자동차보험료 인상</a>
+                    <a href="https://directcpmoc.withusdone.com/" target="_blank" class="description">**보험료가 오르는 이유:** 사고 외에 물가 상승, 제도 변화 등 인상 요인 분석.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmoc.withusdone.com/" target="_blank">자동차보험료 인상</a>
+                    <a href="https://directcpmoc.withusdone.com/" target="_blank" class="description">**보험료가 오르는 이유:** 사고 외에 물가 상승, 제도 변화 등 인상 요인 분석.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">운전자 범위/연령 특약 (가족, 1인 지정, 누구나)</h2>
+            <ul class="link-list">
+                <li class="link-item">
+                    <a href="https://directdpmoa.withusdone.com/" target="_blank">자동차보험 부모님</a>
+                    <a href="https://directdpmoa.withusdone.com/" target="_blank" class="description">**효도 보험 설계:** 부모님의 운전 경력과 연령을 고려한 맞춤형 보험 가입 전략.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directbpmom.withusdone.com/" target="_blank">자동차보험 가족한정 범위</a>
+                    <a href="https://directbpmom.with_us_done.com/" target="_blank" class="description">**가족 운전의 안전망:** 보험에서 인정하는 가족의 정확한 범위를 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmob.withusdone.com/" target="_blank">자동차보험 지정 1인</a>
+                    <a href="https://directdpmob.withusdone.com/" target="_blank" class="description">**특정 운전자만 보장:** 보험료를 절약하면서 지정된 한 사람만 보장받는 방법.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmoj.withusdone.com/" target="_blank">자동차 가족보험</a>
+                    <a href="https://directdpmoj.withusdone.com/" target="_blank" class="description">**온 가족이 함께:** 가족이 모두 운전하는 경우 가장 효율적인 보험 가입 옵션.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmoz.withusdone.com/" target="_blank">자동차 누구나보험</a>
+                    <a href="https://directcpmoz.withusdone.com/" target="_blank" class="description">**가장 넓은 범위:** 누구든 내 차를 운전할 수 있게 보장하는 옵션의 비용.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmoq.withusdone.com/" target="_blank">자동차보험 누구나</a>
+                    <a href="https://directepmoq.withusdone.com/" target="_blank" class="description">**보험 범위의 최대치:** 운전자를 특정하지 않아도 되는 상황과 그에 따른 보험료.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directbpmode.withusdone.com/" target="_blank">20대 자동차보험료</a>
+                    <a href="https://directbpmode.withusdone.com/" target="_blank" class="description">**초기 보험료의 부담:** 운전 경력이 짧은 20대의 높은 보험료를 절약하는 방법.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directbpmoj.withusdone.com/" target="_blank">자동차보험 나이</a>
+                    <a href="https://directbpmoj.withusdone.com/" target="_blank" class="description">**연령에 따른 보험료 변화:** 나이별 할인/할증 특약의 기준과 적용 시기.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directfpmoc.withusdone.com/" target="_blank">자동차보험 1인 추가</a>
+                    <a href="https://directfpmoc.withusdone.com/" target="_blank" class="description">**단기/장기 추가의 해법:** 기존 보험에 특정 운전자 한 명을 추가하는 절차와 비용.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmos.withusdone.com/" target="_blank">자동차보험료 할인</a>
+                    <a href="https://directepmos.withusdone.com/" target="_blank" class="description">**절약의 기술:** 블랙박스, 마일리지, 안전운전 습관 등 다양한 할인 특약 모음.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">만기/갱신/기간: 보험 공백 없는 안전 운전</h2>
+            <ul class="link-list">
+                <li class="link-item">
+                    <a href="https://directcpmog.withusdone.com/" target="_blank">자동차보험 갱신 기간</a>
+                    <a href="https://directcpmog.withusdone.com/" target="_blank" class="description">**놓치면 안 될 골든 타임:** 보험 만료 전 갱신해야 하는 정확한 기간 정보.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directbpmoh.withusdone.com/" target="_blank">자동차보험 갱신</a>
+                    <a href="https://directbpmoh.withusdone.com/" target="_blank" class="description">**재가입 vs 갱신:** 기존 보험을 계속 유지할 때의 절차와 유의 사항.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmok.withusdone.com/" target="_blank">자동차 공동명의 보험</a>
+                    <a href="https://directcpmok.withusdone.com/" target="_blank" class="description">**공동 소유의 보험 전략:** 차량 공동명의 시 보험 가입자와 운전자 지정 방법.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmol.withusdone.com/" target="_blank">다이렉트자동차보험료 비교견적</a>
+                    <a href="https://directcpmol.withusdone.com/" target="_blank" class="description">**합리적 소비자의 필수 코스:** 보험료 절감의 핵심, 다이렉트 상품의 가격 비교.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmoi.withusdone.com/" target="_blank">자동차보험 만기</a>
+                    <a href="https://directcpmoi.withusdone.com/" target="_blank" class="description">**만료일 체크의 중요성:** 보험 효력이 사라지는 시점을 정확히 확인하여 미가입을 피하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directapmok.withusdone.com/" target="_blank">자동차보험료 1년</a>
+                    <a href="https://directapmok.withusdone.com/" target="_blank" class="description">**연간 보험료 계산:** 1년 단위로 산정되는 내 자동차 보험료의 총액.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmoj.withusdone.com/" target="_blank">자동차보험 만기일</a>
+                    <a href="https://directcpmoj.withusdone.com/" target="_blank" class="description">**마지막 날의 중요성:** 보험이 종료되는 정확한 날짜와 시간을 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmov.withusdone.com/" target="_blank">자동차보험 일년</a>
+                    <a href="https://directepmov.withusdone.com/" target="_blank" class="description">**장기 운전을 위한 설계:** 1년 계약 기준의 보장 내용과 비용 분석.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directfpmod.withusdone.com/" target="_blank">자동차보험 1년 가격</a>
+                    <a href="https://directfpmod.withusdone.com/" target="_blank" class="description">**총 지출 비용 명확화:** 연간 보험료가 어떻게 책정되는지 자세히 알아보세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">신규/이전/명의 변경: 차량 소유 변동 시 가이드</h2>
+            <ul class="link-list">
+                <li class="link-item">
+                    <a href="https://directdpmom.withusdone.com/" target="_blank">첫차 보험료</a>
+                    <a href="https://directdpmom.withusdone.com/" target="_blank" class="description">**생애 첫 보험의 도전:** 처음 차를 구매하는 운전자가 알아야 할 보험료 절감 팁.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmom.withusdone.com/" target="_blank">자동차보험 신규</a>
+                    <a href="https://directcpmom.withusdone.com/" target="_blank" class="description">**새로운 시작:** 기존 보험 이력이 없는 경우 신규로 가입하는 절차 안내.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmol.withusdone.com/" target="_blank">신차 보험 가입</a>
+                    <a href="https://directepmol.withusdone.com/" target="_blank" class="description">**새 차의 완벽한 보호:** 신차 출고 시 가장 먼저 고려해야 할 보험 옵션.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmos.withusdone.com/" target="_blank">자동차보험 이전</a>
+                    <a href="https://directdpmos.withusdone.com/" target="_blank" class="description">**보험을 새 차로 옮기기:** 차량을 변경했을 때 기존 보험을 승계하는 방법.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmox.withusdone.com/" target="_blank">자동차보험 변경</a>
+                    <a href="https://directcpmox.withusdone.com/" target="_blank" class="description">**운전 중 조건 변화:** 가입 중간에 운전자 범위, 차량 정보 등을 수정하는 방법.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmoe.withusdone.com/" target="_blank">자동차보험 승계</a>
+                    <a href="https://directdpmoe.withusdone.com/" target="_blank" class="description">**차량 교체 시 경력 인정:** 기존 보험을 해지하지 않고 새로운 차량으로 이어가는 절차.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmoy.withusdone.com/" target="_blank">자동차보험 차량 변경</a>
+                    <a href="https://directdpmoy.withusdone.com/" target="_blank" class="description">**차량 대차 시 필수 조치:** 보험 가입 차량을 교체하는 경우의 상세 안내.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmow.withusdone.com/" target="_blank">자동차보험 명의 변경</a>
+                    <a href="https://directepmow.withusdone.com/" target="_blank" class="description">**소유자 변경 시 필수:** 차량의 소유주가 바뀔 때 보험 계약자 명의를 수정하는 방법.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmoe.withusdone.com/" target="_blank">자동차 명의이전 보험</a>
+                    <a href="https://directepmoe.withusdone.com/" target="_blank" class="description">**명의 변경과 보험의 관계:** 차량 명의 이전 후 보험에 대한 모든 처리 과정.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">보험료 절약 특화: 저렴한 보험 찾기</h2>
+            <ul class="link-list">
+                <li class="link-item">
+                    <a href="https://directepmof.withusdone.com/" target="_blank">저렴한 자동차보험</a>
+                    <a href="https://directepmof.withusdone.com/" target="_blank" class="description">**숨겨진 최저가 탐색:** 가성비가 높은 보험 상품을 찾는 비법 공개.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmoq.withusdone.com/" target="_blank">자동차보험 싼곳</a>
+                    <a href="https://directdpmoq.withusdone.com/" target="_blank" class="description">**가격 경쟁력 1위:** 여러 보험사 중 가장 저렴한 견적을 제공하는 곳 안내.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmou.withusdone.com/" target="_blank">자동차보험 저렴한곳</a>
+                    <a href="https://directdpmou.withusdone.com/" target="_blank" class="description">**합리적 소비자의 선택:** 비용 대비 효율이 높은 보험 상품 리스트.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmoa.withusdone.com/" target="_blank">타는 만큼 내는 보험</a>
+                    <a href="https://directepmoa.with_us_done.com/" target="_blank" class="description">**마일리지 특약의 최대 장점:** 주행 거리에 따라 보험료를 돌려받는 절약형 보험.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directbpmod.withusdone.com/" target="_blank">20대 자동차보험료</a>
+                    <a href="https://directbpmod.withusdone.com/" target="_blank" class="description">**초기 보험료의 부담:** 운전 경력이 짧은 20대의 높은 보험료를 절약하는 방법.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directbpmov.withusdone.com/" target="_blank">경차 보험료</a>
+                    <a href="https://directbpmov.withusdone.com/" target="_blank" class="description">**작은 차의 큰 혜택:** 경차 소유자가 누릴 수 있는 보험료 할인 정보.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmod.withusdone.com/" target="_blank">전기차 보험료 비교</a>
+                    <a href="https://directdpmod.withusdone.com/" target="_blank" class="description">**미래 차의 보험료 분석:** 전기차만의 특별한 보험료 산정 기준과 할인 특약.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">특수 차량 보험 (법인, 외제차, 중고차)</h2>
+            <ul class="link-list">
+                <li class="link-item">
+                    <a href="https://directcpmoc.withusdone.com/" target="_blank">자동차보험료 인상</a>
+                    <a href="https://directcpmoc.withusdone.com/" target="_blank" class="description">**보험료가 오르는 이유:** 사고 외에 물가 상승, 제도 변화 등 인상 요인 분석.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmoe.withusdone.com/" target="_blank">외제차 보험</a>
+                    <a href="https://directdpmoe.withusdone.com/" target="_blank" class="description">**수입차의 높은 보장 기준:** 외제차 소유자가 반드시 확인해야 할 보험료와 특약.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directdpmor.withusdone.com/" target="_blank">법인 자동차보험</a>
+                    <a href="https://directdpmor.withusdone.com/" target="_blank" class="description">**기업 차량 관리의 핵심:** 법인 명의 차량의 보험 가입 및 운전자 지정 규정.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmok.withusdone.com/" target="_blank">중고차 보험</a>
+                    <a href="https://directepmok.withusdone.com/" target="_blank" class="description">**가치에 맞는 합리적 보험:** 중고차 구매 시 보험 가입 시 고려할 사항과 차량가액 산정.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directepmoi.withusdone.com/" target="_blank">자동차 2대 보험</a>
+                    <a href="https://directepmoi.withusdone.com/" target="_blank" class="description">**다차량 소유자의 절약 팁:** 차량 두 대 이상을 소유했을 때 보험료를 절감하는 방법.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+                <li class="link-item">
+                    <a href="https://directcpmos.withusdone.com/" target="_blank">다이렉트자동차보험료 비교</a>
+                    <a href="https://directcpmos.withusdone.com/" target="_blank" class="description">**최소 수수료 최대 혜택:** 온라인으로 직접 가입할 때의 비용 절감 효과를 직접 확인하세요.</a>
+                </li>
+            </ul>
+        </section>
+
     </main>
-  </body>
+
+    <footer class="footer">
+        <p>© 2026 프리미엄 자동차 보험 비교 견적. 모든 정보는 다이렉트 보험료 최적화를 위해 제공됩니다.</p>
+    </footer>
+
+</body>
 </html>
